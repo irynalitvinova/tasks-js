@@ -1,4 +1,4 @@
-// Task 2 Messi goals function
+// Messi goals function
 /* 
 Messi is a soccer player with goals in three leagues:
 LaLiga
