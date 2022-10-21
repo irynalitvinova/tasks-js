@@ -9,7 +9,7 @@ makeNegative(0.12); // return -0.12
 */
 
 // First Solution
-let num1;
+let num;
 function makeNegative(num) {
   if (num < 0) {
     return num;
@@ -24,16 +24,16 @@ function makeNegative(num) {
 makeNegative();
 
 // Second Solution
-let num;
-function makeNegative(num) {
-  if (num < 0) {
-    return num;
+let number;
+function makeNegative(number) {
+  if (number < 0) {
+    return number;
   }
-  if (num === 0) {
+  if (number === 0) {
     return 0;
   }
   else {
-    return -Math.abs(num);
+    return -Math.abs(number);
   }
 }
 console.log(makeNegative(1));
