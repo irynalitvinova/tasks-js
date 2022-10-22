@@ -47,6 +47,11 @@ function makeNegative(num) {
 }
 makeNegative();
 
+// Forth Solution
+function makeNegative(num) {
+  return -Math.abs(num);
+}
+
 
 
 
