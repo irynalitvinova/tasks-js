@@ -36,7 +36,18 @@ function makeNegative(number) {
     return -Math.abs(number);
   }
 }
-console.log(makeNegative(1));
-console.log(makeNegative(-5));
-console.log(makeNegative(0));
-console.log(makeNegative(0.12));
+makeNegative();
+
+
+// Third Solution
+function makeNegative(num) {
+  if (num > 0) {
+    return -num;
+  } return num;
+}
+makeNegative();
+
+
+
+
+
