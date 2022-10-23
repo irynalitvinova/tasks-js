@@ -7,7 +7,7 @@ Assume the second parameter will be a string holding one of two values: 'value' 
 min([1,2,3,4,5], 'value') // => 1
 min([1,2,3,4,5], 'index') // => 0
  */
-
+// First Solution
 function min(arr, toReturn) {
   if (toReturn === 'value') {
     return Math.min(...arr);
@@ -17,3 +17,20 @@ function min(arr, toReturn) {
 }
 console.log(min([42, 54, 65, 87, 7], 'value'));
 console.log(min([42, 54, 65, 87, 7], 'index'));
+
+// Second Solution
+function min(arr, toReturn) {
+  let minValueOfArray = 0;
+  let indexOfMinVallueOfArray;
+  minValueOfArray = Math.min(...arr);
+  indexOfMinVallueOfArray = arr.indexOf(minValueOfArray);
+
+  if (toReturn === 'value') {
+    return minValueOfArray;
+  } else {
+    return indexOfMinVallueOfArray;
+  }
+}
+console.log(min([42, 54, 65, 87, 6], 'value'));
+console.log(min([42, 54, 65, 87, 6], 'index'));
+
