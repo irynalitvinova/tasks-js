@@ -21,16 +21,16 @@ console.log(min([42, 54, 65, 87, 7], 'index'));
 // Second Solution
 function min(arr, toReturn) {
   let minValueOfArray = 0;
-  let indexOfMinVallueOfArray;
+  let indexOfMinValueOfArray;
   minValueOfArray = Math.min(...arr);
-  indexOfMinVallueOfArray = arr.indexOf(minValueOfArray);
+  indexOfMinValueOfArray = arr.indexOf(minValueOfArray);
 
   if (toReturn === 'value') {
     return minValueOfArray;
   } else {
-    return indexOfMinVallueOfArray;
+    return indexOfMinValueOfArray;
   }
 }
-console.log(min([42, 54, 65, 87, 6], 'value'));
-console.log(min([42, 54, 65, 87, 6], 'index'));
+console.log(min([42, 3, 65, 87, 6], 'value'));
+console.log(min([42, 3, 65, 87, 6], 'index'));
 
