@@ -1,4 +1,4 @@
-//A wolf in sheep's clothing
+// A wolf in sheep's clothing
 /*
 Wolves have been reintroduced to Great Britain. 
 You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. 
@@ -19,18 +19,22 @@ Output: "Pls go away and stop eating my sheep"
 */
 
 function warnTheSheep(queue) {
-  let wolf = 'wolf';
-  let lastIndexOfQueque;
-  lastIndexOfQueque = queue.pop();
-  if (wolf === lastIndexOfQueque) {
-    return "Pls go away and stop eating my sheep";
-  }
-else {
-  return "Oi! Sheep number 1! You are about to be eaten by a wolf!";
-}
-  
+  const wolf = 'wolf';
+  const indexOfWolf = queue.indexOf(wolf);
+  const lastAnimal = queue[queue.length - 1]
+  const lastIndexOfQueque = queue.lastIndexOf(lastAnimal);;
+  const sheepNearWolf = lastIndexOfQueque - indexOfWolf;;
 
+  if (wolf === lastAnimal) {
+    return "Pls go away and stop eating my sheep";
+  } else {
+    return "Oi! Sheep number " + sheepNearWolf + "!" + " You are about to be eaten by a wolf!";
+  }
 }
-console.log(warnTheSheep(["sheep", "sheep", "sheep", "wolf", "sheep"]));
+
 console.log(warnTheSheep(["sheep", "sheep", "sheep", "wolf", "sheep"]));
 console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "wolf"]));
+console.log(warnTheSheep(["sheep", "wolf", "sheep", "sheep"]));
+console.log(warnTheSheep(["sheep", "wolf", "sheep", "sheep", "sheep", "sheep"]));
+console.log(warnTheSheep(["sheep", "wolf", "sheep", "sheep", "sheep"]));
+
