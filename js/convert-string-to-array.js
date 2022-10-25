@@ -19,9 +19,9 @@ function stringToArray(string) {
 // Third Solution without .split()
 function stringToArray(string) {
   let words = [''];
-  for(const letter of string) {
-    if(letter !== ' ') {
-      words[words.length-1] += letter;
+  for (const letter of string) {
+    if (letter !== ' ') {
+      words[words.length - 1] += letter;
     }
     else {
       words.push('');

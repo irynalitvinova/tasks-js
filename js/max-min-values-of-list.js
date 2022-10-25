@@ -8,6 +8,7 @@ and return the largest and lowest number in that list, respectively.
 [5]                             -> min = 5, max = 5
  */
 
+// First Solution
 let min = function (list) {
   return Math.min(...list);
 }
@@ -15,6 +16,31 @@ let min = function (list) {
 let max = function (list) {
   return Math.max(...list);
 }
-
 console.log(min([42, 54, 65, 87, 0]));
 console.log(max([42, 54, 65, 87, 0]));
+
+
+// Second solution
+function minimum(arr) {
+  let minValueOfArray = arr[0];
+  for (let num of arr) {
+    if (num < minValueOfArray) {
+      minValueOfArray = num;
+    }
+  }
+  return minValueOfArray;
+}
+
+function maximum(arr) {
+  let maxValueOfArray = arr[0];
+  for (let num of arr) {
+    if (num > maxValueOfArray) {
+      maxValueOfArray = num;
+    }
+  }
+  return maxValueOfArray;
+}
+
+
+
+
