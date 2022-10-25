@@ -15,12 +15,23 @@ console.log(stringToArray("I love arrays they are my favorite"));
 function stringToArray(string) {
   return string.split(' ');
 }
-stringToArray("Robin Singh");
 
-// Third Solution
+// Third Solution without .split()
 function stringToArray(string) {
-  return string.split(' ');
+  let words = [''];
+  for(const letter of string) {
+    if(letter !== ' ') {
+      words[words.length-1] += letter;
+    }
+    else {
+      words.push('');
+    }
+  }
+  return words;
 }
+stringToArray();
+
+
 
 
 
