@@ -19,6 +19,15 @@ let max = function (list) {
 console.log(min([42, 54, 65, 87, 0]));
 console.log(max([42, 54, 65, 87, 0]));
 
+// If array too big we can use .apply and write first argument(null)
+function min(list) {
+  return Math.min.apply(null, list);
+}
+
+function max(list) {
+  return Math.max.apply(null, list);
+}
+
 
 // Second solution
 function minimum(arr) {
