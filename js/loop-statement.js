@@ -20,10 +20,10 @@ console.log("values of ob:")
 showObjectValues(ob);
 */
 function giveMeFive(obj) {
-  let itemFive = [];
+  let arrayWithFives = [];
   for (let key in obj) {
-    if (key.length === 5) itemFive.push(key);
-    if (obj[key].length === 5) itemFive.push(obj[key]);
+    if (key.length === 5) arrayWithFives.push(key);
+    if (obj[key].length === 5) arrayWithFives.push(obj[key]);
   }
-  return itemFive;
+  return arrayWithFives;
 }
