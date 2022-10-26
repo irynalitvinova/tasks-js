@@ -7,11 +7,12 @@ The wanted outcome is that when all function in the array are executed, the numb
 */
 
 function buildFun(n) {
-  const res = []
+  const arrayOfFunctions = []
   for (let i = 0; i < n; i++) {
-    res.push(function () {
+    arrayOfFunctions.push(function () {
       return i;
     })
   }
-  return res;
+  return arrayOfFunctions;
 }
+buildFun();
