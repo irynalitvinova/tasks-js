@@ -8,5 +8,5 @@ and month 11 (November), is part of the fourth quarter.
 */
 
 const quarterOf = (month) => {
-  return Math.ceil(month/3)
+  return Math.ceil(month/3);
 }
