@@ -41,6 +41,7 @@ function pickIt(arr) {
   return [odd, even];
 }
 
+
 // Do something "n.times" (Simplifying "for" loops)
 // https://www.codewars.com/kata/56e6a330715e7221d9000a3b/train/javascript
 
@@ -57,6 +58,24 @@ Number.prototype.times = function (f) {
 Number.prototype.times = function (f) {
   for (let i = 0; i < this; f(i++)) {
   }
+}
+
+
+// No Loops 2 - You only need one
+// https://www.codewars.com/kata/57cc40b2f8392dbf2a0003ce/train/javascript
+
+// First Solution
+function check(a, x) {
+  const foundCheckElement = a.find(element => element === x);
+  if (foundCheckElement === x) {
+    return true;
+  }
+  return false;
+}
+
+// Second Solution
+function check(arr, x) {
+  return arr.includes(x);
 }
 
 
