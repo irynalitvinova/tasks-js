@@ -133,3 +133,21 @@ function loopArr(arr, direction, steps) {
 console.log(loopArr([1, 5, 87, 45, 8, 8], 'left', 2));  // [87, 45, 8, 8, 1, 5]
 console.log(loopArr([1, 5, 87, 45, 8, 8], 'right', 2)); // [8, 8, 1, 5, 87, 45]
 
+
+// No Loops 1 - Small enough?
+// https://www.codewars.com/kata/57cc4853fa9fc57a6a0002c2/train/javascript
+
+// First Solution
+function smallEnough(a, limit) {
+  return a.every(element => element <= limit);
+}
+
+// Second Solution
+function smallEnough(arr, limit) {
+  let value = arr.find(element => element > limit);
+  if (value > limit) {
+    return false;
+  }
+  return true;
+}
+
