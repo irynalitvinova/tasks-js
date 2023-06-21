@@ -151,3 +151,28 @@ function smallEnough(arr, limit) {
   return true;
 }
 
+
+// Alternating Loops
+// https://www.codewars.com/kata/55e529bf6c6497394a0000b5/train/javascript
+
+function combine(...arr) {
+  let objFromArr = {};
+  let combineArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (objFromArr[j] = objFromArr[j]) {
+        objFromArr[j] = objFromArr[j].concat(arr[i][j]);
+      }
+      else {
+        objFromArr[j] = [arr[i][j]];
+      }
+    }
+  }
+  for (let key in objFromArr) {
+    combineArray = combineArray.concat(objFromArr[key]);
+  }
+  return combineArray;
+}
+console.log(combine(['a', 'b', 'c'], [1, 2, 3])); // ['a', 1, 'b', 2, 'c', 3]
+
+
